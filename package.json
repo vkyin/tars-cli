@@ -1,0 +1,30 @@
+{
+  "name": "tars-cli",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkyin/tars-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkyin/tars-cli/issues"
+  },
+  "homepage": "https://github.com/vkyin/tars-cli#readme",
+  "dependencies": {
+    "@tars/deploy": "^2.0.3",
+    "axios": "^0.18.0",
+    "commander": "^2.19.0",
+    "debug": "^4.1.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
