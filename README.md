@@ -1,7 +1,7 @@
-# tars-cli
+# tars-web
 
 ## usage
 
 ```bash
-tars-web conf
+tars-web patch -u http://xxx.com -a Test -m TestPatch
 ```

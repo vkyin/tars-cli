@@ -1,8 +1,8 @@
 {
-  "name": "tars-cli",
+  "name": "tars-web",
   "version": "0.0.1",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +18,6 @@
   "homepage": "https://github.com/vkyin/tars-cli#readme",
   "dependencies": {
     "@tars/deploy": "^2.0.3",
-    "axios": "^0.18.0",
     "commander": "^2.19.0",
     "debug": "^4.1.0",
     "request": "^2.88.0",
