@@ -21,6 +21,35 @@ program
     })
   })
 
+program.command('patchRemote <app> <module>')
+  .option('-r, --remote <hostname>', '远端编译机hostname')
+  .action(function (app, moduleName, cmd) {
+    require('./lib/patchRemote')({ app, module: moduleName, url: cmd.url }).then(() => {
+      process.exit(0)
+    }).catch(err => {
+      if (cmd.verbose) {
+        console.error(err)
+      } else {
+        console.error(err.message)
+      }
+      process.exit(-1)
+    })
+  })
+
+program.command('runServer <port> <url>')
+  .action(function (port, url, cmd) {
+    require('./lib/server')(port, url).then(() => {
+      console.log('listening', port, url)
+    }).catch(err => {
+      if (cmd.verbose) {
+        console.error(err)
+      } else {
+        console.error(err.message)
+      }
+      process.exit(-1)
+    })
+  })
+
 program.on('command:*', function () {
   console.error('Invalid command: %s\nSee --help for a list of available commands.', program.args.join(' '))
   process.exit(1)
