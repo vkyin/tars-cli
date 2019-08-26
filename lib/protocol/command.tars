@@ -1,4 +1,9 @@
 module Command {
+    struct BatchCommand {
+        0 require vector<string> commands;
+        1 require vector<vector<byte>> datas;
+    };
+
     struct TarsDeploy{
         0 require string serverName;
         1 require vector<byte> codeZipPkg;
