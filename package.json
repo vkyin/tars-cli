@@ -1,6 +1,6 @@
 {
   "name": "tars-web",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "main": "tars-web.js",
   "bin": "tars-web.js",
