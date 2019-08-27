@@ -2,9 +2,10 @@
 
 var program = require('commander')
 const { runServer } = require('./lib/server')
+const pkg = require('./package.json')
 
 program
-  .version('0.0.1')
+  .version(pkg.version)
   .option('-v, --verbose', '是否打印相信错误信息')
 
 program.command('patchRemote <app> <module>')
