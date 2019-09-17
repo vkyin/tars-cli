@@ -13,6 +13,7 @@ module Command {
         0 require string appName;
         1 require string serverName;
         2 require vector<byte> codeZipPkg;
+        3 optional string patcher;
     };
 
     struct SaveFile {

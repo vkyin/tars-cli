@@ -2,13 +2,17 @@
 
 ## usage
 
+在编译机(如: 10.1.1.12)上运行服务端
 ```bash
-npm i tars-web -D
+tars-web runServer 8080 http://yourtarsweb.com
+```
 
-# add script into your package.json
-# "scripts": {
-#   "patch": "tars-web patch TestApp TestModule -u http://yourtarsweb.com"
-# }
+在客户端执行
 
-npm run patch
+```bash
+# 发布到测试环境
+tars-web patch TestApp TestModule -r 10.1.1.12:8080
+
+# 打包
+tars-web deploy TestModule -r 10.1.1.12:8080
 ```
