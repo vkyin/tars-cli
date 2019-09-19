@@ -14,11 +14,13 @@ module.exports = async (app, server, compileHost) => {
   const patcher = await new Promise(resolve => {
     // question方法
     rl.question(`输入发布人名字，5s后使用（${hostname}）`, function (answer) {
-      resolve(answer)
+      const _patcher = answer.trim() || hostname
+      resolve(_patcher)
       rl.close()
     })
     setTimeout(() => {
       resolve(hostname)
+      rl.close()
     }, 5000)
   })
 
