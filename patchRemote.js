@@ -17,6 +17,7 @@ function getIPAdress() {
 }
 
 module.exports = async (app, server, compileHost) => {
+  const hostname = `${getIPAdress()}|${os.hostname()}`
   console.log('\n发布人：', `${getIPAdress()}|${os.hostname()}`)
 
   const ctx = await getClient(compileHost).init()
